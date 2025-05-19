@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Music Gawr</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h5 class="mb-0">Quản lý Music Gawr</h5>
+        </div>
+
+        <ul class="list-unstyled">
+            <li>
+                <a href="#baiHatSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="bi bi-music-note"></i> Bài Hát
+                    <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                </a>
+                <ul class="collapse submenu" id="baiHatSubmenu">
+                    <li>
+                        <a href="#vietNamBaiHat" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Việt Nam <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="vietNamBaiHat">
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="nhactre">Nhạc Trẻ</a></li>
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="trutinh">Trữ Tình</a></li>
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="remixviet">Remix Việt</a></li>
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="rapviet">Rap Việt</a></li>
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="tienchien">Tiền Chiến</a></li>
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="nhactrinh">Nhạc Trịnh</a></li>
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="rockviet">Rock Việt</a></li>
+                            <li><a href="#" data-type="song" data-category="vietnam" data-subcategory="cachmang">Cách Mạng</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#auMyBaiHat" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Âu Mỹ <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="auMyBaiHat">
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="pop">Pop</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="rock">Rock</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="electronicadance">Electronica/Dance</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="rbhiphoprap">R&B/HipHop/Rap</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="bluesjazz">Blues/Jazz</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="country">Country</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="latin">Latin</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="indie">Indie</a></li>
+                            <li><a href="#" data-type="song" data-category="usuk" data-subcategory="aumy-khac">Âu Mỹ khác</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#chauABaiHat" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Châu Á <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="chauABaiHat">
+                            <li><a href="#" data-type="song" data-category="asia" data-subcategory="nhachan">Nhạc Hàn</a></li>
+                            <li><a href="#" data-type="song" data-category="asia" data-subcategory="nhachoa">Nhạc Hoa</a></li>
+                            <li><a href="#" data-type="song" data-category="asia" data-subcategory="nhacnhat">Nhạc Nhật</a></li>
+                            <li><a href="#" data-type="song" data-category="asia" data-subcategory="nhacthai">Nhạc Thái</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#khacBaiHat" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Khác <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="khacBaiHat">
+                            <li><a href="#" data-type="song" data-category="other" data-subcategory="thieunhi">Thiếu Nhi</a></li>
+                            <li><a href="#" data-type="song" data-category="other" data-subcategory="khongloi">Không Lời</a></li>
+                            <li><a href="#" data-type="song" data-category="other" data-subcategory="beat">Beat</a></li>
+                            <li><a href="#" data-type="song" data-category="other" data-subcategory="theloaikhac">Thể Loại Khác</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#playlistSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="bi bi-music-note-list"></i> Playlist
+                    <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                </a>
+                <ul class="collapse submenu" id="playlistSubmenu">
+                    <li>
+                        <a href="#vietNamPlaylist" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Việt Nam <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="vietNamPlaylist">
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="nhactre">Nhạc Trẻ</a></li>
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="trutinh">Trữ Tình</a></li>
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="remixviet">Remix Việt</a></li>
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="rapviet">Rap Việt</a></li>
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="tienchien">Tiền Chiến</a></li>
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="nhactrinh">Nhạc Trịnh</a></li>
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="rockviet">Rock Việt</a></li>
+                            <li><a href="#" data-type="playlist" data-category="vietnam" data-subcategory="cachmang">Cách Mạng</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#auMyPlaylist" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Âu Mỹ <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="auMyPlaylist">
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="pop">Pop</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="rock">Rock</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="electronicadance">Electronica/Dance</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="rbhiphoprap">R&B/HipHop/Rap</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="bluesjazz">Blues/Jazz</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="country">Country</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="latin">Latin</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="indie">Indie</a></li>
+                            <li><a href="#" data-type="playlist" data-category="usuk" data-subcategory="aumy-khac">Âu Mỹ khác</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#chauAPlaylist" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Châu Á <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="chauAPlaylist">
+                            <li><a href="#" data-type="playlist" data-category="asia" data-subcategory="nhachan">Nhạc Hàn</a></li>
+                            <li><a href="#" data-type="playlist" data-category="asia" data-subcategory="nhachoa">Nhạc Hoa</a></li>
+                            <li><a href="#" data-type="playlist" data-category="asia" data-subcategory="nhacnhat">Nhạc Nhật</a></li>
+                            <li><a href="#" data-type="playlist" data-category="asia" data-subcategory="nhacthai">Nhạc Thái</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#khacPlaylist" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Khác <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="khacPlaylist">
+                            <li><a href="#" data-type="playlist" data-category="other" data-subcategory="thieunhi">Thiếu Nhi</a></li>
+                            <li><a href="#" data-type="playlist" data-category="other" data-subcategory="khongloi">Không Lời</a></li>
+                            <li><a href="#" data-type="playlist" data-category="other" data-subcategory="nhacphim">Nhạc Phim</a></li>
+                            <li><a href="#" data-type="playlist" data-category="other" data-subcategory="theloaikhac">Thể Loại Khác</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#tuyenTapSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="bi bi-collection"></i> Tuyển Tập
+                    <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                </a>
+                <ul class="collapse submenu" id="tuyenTapSubmenu">
+                    <li>
+                        <a href="#theLoaiTuyenTap" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Thể Loại <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="theLoaiTuyenTap">
+                            <li><a href="#" data-type="collection" data-category="genre" data-subcategory="nhactre">Nhạc Trẻ</a></li>
+                            <li><a href="#" data-type="collection" data-category="genre" data-subcategory="trutinh">Trữ Tình</a></li>
+                            <li><a href="#" data-type="collection" data-category="genre" data-subcategory="pop">Pop</a></li>
+                            <li><a href="#" data-type="collection" data-category="genre" data-subcategory="nhachan">Nhạc Hàn</a></li>
+                            <li><a href="#" data-type="collection" data-category="genre" data-subcategory="nhachoa">Nhạc Hoa</a></li>
+                            <li><a href="#" data-type="collection" data-category="genre" data-subcategory="soundtrack">Soundtrack</a></li>
+                            <li><a href="#" data-type="collection" data-category="genre" data-subcategory="khongloi">Không Lời</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tamTrangTuyenTap" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Tâm Trạng <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="tamTrangTuyenTap">
+                            <li><a href="#" data-type="collection" data-category="mood" data-subcategory="buon">Buồn</a></li>
+                            <li><a href="#" data-type="collection" data-category="mood" data-subcategory="hungphan">Hưng Phấn</a></li>
+                            <li><a href="#" data-type="collection" data-category="mood" data-subcategory="nhonhung">Nhớ Nhung</a></li>
+                            <li><a href="#" data-type="collection" data-category="mood" data-subcategory="thattinh">Thất Tình</a></li>
+                            <li><a href="#" data-type="collection" data-category="mood" data-subcategory="thugian">Thư Giãn</a></li>
+                            <li><a href="#" data-type="collection" data-category="mood" data-subcategory="vuive">Vui Vẻ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#khungCanhTuyenTap" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Khung Cảnh <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="khungCanhTuyenTap">
+                            <li><a href="#" data-type="collection" data-category="scene" data-subcategory="cafe">Cafe</a></li>
+                            <li><a href="#" data-type="collection" data-category="scene" data-subcategory="barclub">Bar - Club</a></li>
+                            <li><a href="#" data-type="collection" data-category="scene" data-subcategory="phongtra">Phòng Trà</a></li>
+                            <li><a href="#" data-type="collection" data-category="scene" data-subcategory="tamboiloi">Tắm - Bơi Lội</a></li>
+                            <li><a href="#" data-type="collection" data-category="scene" data-subcategory="tapgym">Tập Gym</a></li>
+                            <li><a href="#" data-type="collection" data-category="scene" data-subcategory="langman">Lãng Mạn</a></li>
+                            <li><a href="#" data-type="collection" data-category="scene" data-subcategory="mua">Mưa</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#chuDeTuyenTap" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Chủ Đề <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="chuDeTuyenTap">
+                            <li><a href="#" data-type="collection" data-category="topic" data-subcategory="tinhyeu">Tình Yêu</a></li>
+                            <li><a href="#" data-type="collection" data-category="topic" data-subcategory="top100">Top 100</a></li>
+                            <li><a href="#" data-type="collection" data-category="topic" data-subcategory="weekend">Weekend</a></li>
+                            <li><a href="#" data-type="collection" data-category="topic" data-subcategory="chillout">Chill Out</a></li>
+                            <li><a href="#" data-type="collection" data-category="topic" data-subcategory="bathu">Bất Hủ</a></li>
+                            <li><a href="#" data-type="collection" data-category="topic" data-subcategory="songca">Song Ca</a></li>
+                            <li><a href="#" data-type="collection" data-category="topic" data-subcategory="mashup">Mashup</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#top100Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="bi bi-graph-up"></i> Top 100
+                    <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                </a>
+                <ul class="collapse submenu" id="top100Submenu">
+                    <li>
+                        <a href="#vietNamTop100" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Việt Nam <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="vietNamTop100">
+                            <li><a href="#" data-type="top100" data-category="vietnam" data-subcategory="nhactre">Nhạc Trẻ</a></li>
+                            <li><a href="#" data-type="top100" data-category="vietnam" data-subcategory="trutinh">Trữ Tình</a></li>
+                            <li><a href="#" data-type="top100" data-category="vietnam" data-subcategory="remixviet">Remix Việt</a></li>
+                            <li><a href="#" data-type="top100" data-category="vietnam" data-subcategory="rapviet">Rap Việt</a></li>
+                            <li><a href="#" data-type="top100" data-category="vietnam" data-subcategory="tienchien">Tiền Chiến</a></li>
+                            <li><a href="#" data-type="top100" data-category="vietnam" data-subcategory="nhactrinh">Nhạc Trịnh</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#auMyTop100" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Âu Mỹ <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="auMyTop100">
+                            <li><a href="#" data-type="top100" data-category="usuk" data-subcategory="pop">Pop</a></li>
+                            <li><a href="#" data-type="top100" data-category="usuk" data-subcategory="electronicadance">Electronica/Dance</a></li>
+                            <li><a href="#" data-type="top100" data-category="usuk" data-subcategory="rbhiphoprap">R&B/HipHop/Rap</a></li>
+                            <li><a href="#" data-type="top100" data-category="usuk" data-subcategory="bluesjazz">Blues/Jazz</a></li>
+                            <li><a href="#" data-type="top100" data-category="usuk" data-subcategory="country">Country</a></li>
+                            <li><a href="#" data-type="top100" data-category="usuk" data-subcategory="latin">Latin</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#chauATop100" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Châu Á <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="chauATop100">
+                            <li><a href="#" data-type="top100" data-category="asia" data-subcategory="nhachan">Nhạc Hàn</a></li>
+                            <li><a href="#" data-type="top100" data-category="asia" data-subcategory="nhachoa">Nhạc Hoa</a></li>
+                            <li><a href="#" data-type="top100" data-category="asia" data-subcategory="nhacnhat">Nhạc Nhật</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#khacTop100" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            Khác <span class="toggle-btn"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                        <ul class="collapse submenu" id="khacTop100">
+                            <li><a href="#" data-type="top100" data-category="other" data-subcategory="khongloi">Không Lời</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-4">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a class="navbar-brand ml-3" href="#" style="margin-left: 10px;">
+                    Admin Dashboard
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="exportCSVBtn"><i class="bi bi-file-earmark-excel"></i> Xuất CSV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-gear-fill"></i> Cài đặt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Welcome Section -->
+        <div class="container-fluid px-4" id="welcomeSection" style="display: block;">
+            <div class="row">
+                <div class="col-12 text-center py-5">
+                    <h1 class="display-4">Chào mừng đến với Quản lý Music Gawr</h1>
+                    <p class="lead mt-3">Hệ thống quản lý bài hát, playlist và tuyển tập từ NhacCuaTui.</p>
+                    <p>Vui lòng chọn một danh mục từ menu bên trái để bắt đầu xem, cào dữ liệu hoặc xuất CSV.</p>
+                    <div class="mt-4">
+                        <i class="bi bi-music-note-list fs-1 text-danger"></i>
+                    </div>
+                    <p class="text-muted mt-3">Danh sách bài hát sẽ được hiển thị sau khi bạn chọn một mục trong menu.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container-fluid px-4" id="mainContent" style="display: none;">
+            <!-- Main Content -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 id="pageTitle">Top 100 Nhạc Trẻ Việt Nam</h2>
+                    <p id="contentDescription">Danh sách 100 bài hát nhạc trẻ Việt Nam được yêu thích nhất.</p>
+                </div>
+            </div>
+
+            <!-- Tools Section -->
+            <div class="tools-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="d-grid">
+                            <button class="btn btn-scrape btn-lg text-white" id="scrapeBtn">
+                                <i class="bi bi-cloud-download"></i> Cào dữ liệu mới
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg" id="searchInput" placeholder="Tìm kiếm bài hát hoặc ca sĩ...">
+                            <button class="btn btn-dark" type="button" id="searchBtn">
+                                <i class="bi bi-search"></i> Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="alert d-none" id="statusAlert" role="alert"></div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="text-muted mb-0">
+                            <i class="bi bi-clock"></i> Cập nhật lần cuối: <span id="lastUpdate">Chưa có dữ liệu</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Songs List -->
+            <div id="songsList" class="row">
+                <!-- Songs will be loaded here dynamically -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-4 mb-5">
+                <div class="col-12">
+                    <nav>
+                        <ul class="pagination" id="pagination">
+                            <!-- Pagination will be generated dynamically -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
